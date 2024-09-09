@@ -21,17 +21,17 @@ class _LoginPageState extends State<LoginPage> {
         title: const Text('Login', style: TextStyle(color: Color(0xFF111111))),
         centerTitle: true,
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(20.0),
         child: Form(
           key: _formKey,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start, // Align children to the start (left)
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Align(
-                alignment: Alignment.topRight , // Align the text to the left
-                child: const Text(
+              const Align(
+                alignment: Alignment.topRight ,
+                child: Text(
                   'Byte Force',
                   style: TextStyle(
                     fontSize: 50,
@@ -40,7 +40,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               ),
-              const SizedBox(height: 150),
+              const SizedBox(height: 200),
               TextFormField(
                 decoration: InputDecoration(
                   labelText: 'Email',
